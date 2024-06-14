@@ -1,38 +1,46 @@
-# expense-manager-java-angular
+# Expense Manager Backend
 
-Voglio una web application con BE in Java e front end in Angulr che sia un Gestore spese. IL BE prendei dati da un DB locale al pc.Creaanche il DB
+This is a Spring Boot application for managing expenses. It provides a RESTful API for performing CRUD operations on expenses and uses an H2 in-memory database for storing data.
 
+## Prerequisites
 
-## Collaborate with GPT Engineer
+- Java 11 or higher
+- Maven
 
-This is a [gptengineer.app](https://gptengineer.app)-synced repository 🌟🤖
+## Getting Started
 
-Changes made via gptengineer.app will be committed to this repo.
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd expense-manager-backend
+   ```
 
-If you clone this repo and push changes, you will have them reflected in the GPT Engineer UI.
+2. Build the project:
+   ```bash
+   mvn clean install
+   ```
 
-## Tech stack
+3. Run the application:
+   ```bash
+   mvn spring-boot:run
+   ```
 
-This project is built with React and Chakra UI.
+4. Access the H2 database console:
+   Open a web browser and go to `http://localhost:8080/h2-console`. Use the following credentials to log in:
+   - JDBC URL: `jdbc:h2:mem:testdb`
+   - Username: `sa`
+   - Password: `password`
 
-- Vite
-- React
-- Chakra UI
+5. Use the API:
+   The API is available at `http://localhost:8080/api/expenses`. You can use tools like Postman or cURL to interact with the API.
 
-## Setup
+## API Endpoints
 
-```sh
-git clone https://github.com/GPT-Engineer-App/expense-manager-java-angular.git
-cd expense-manager-java-angular
-npm i
-```
+- `GET /api/expenses`: Retrieve all expenses
+- `POST /api/expenses`: Create a new expense
+- `PUT /api/expenses/{id}`: Update an existing expense
+- `DELETE /api/expenses/{id}`: Delete an expense
 
-```sh
-npm run dev
-```
+## License
 
-This will run a dev server with auto reloading and an instant preview.
-
-## Requirements
-
-- Node.js & npm - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+This project is licensed under the MIT License.
