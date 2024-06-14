@@ -1,0 +1,8 @@
+<h2>{{ expense.id ? 'Edit' : 'Add' }} Expense</h2>
+<form (ngSubmit)="saveExpense()">
+  <label for="name">Name:</label>
+  <input type="text" id="name" [(ngModel)]="expense.name" name="name" required>
+  <label for="amount">Amount:</label>
+  <input type="number" id="amount" [(ngModel)]="expense.amount" name="amount" required>
+  <button type="submit">Save</button>
+</form>
