@@ -1,0 +1,19 @@
+<h2>Expense List</h2>
+<ul>
+  <li *ngFor="let expense of expenses">
+    {{ expense.name }}: {{ expense.amount }}
+    <button (click)="delete(expense)">Delete</button>
+  </li>
+</ul>
+
+<div>
+  <label for="name">Name:</label>
+  <input #name />
+
+  <label for="amount">Amount:</label>
+  <input #amount type="number" />
+
+  <button (click)="add(name.value, amount.value); name.value=''; amount.value=''">
+    Add
+  </button>
+</div>
