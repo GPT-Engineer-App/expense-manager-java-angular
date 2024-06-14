@@ -28,7 +28,13 @@
         "react-dom": "^18.2.0",
         "react-icons": "^4.12.0",
         "react-router-dom": "^6.20.1",
-        "zone.js": "~0.13.0"
+        "zone.js": "~0.13.0",
+        "@angular/core": "latest",
+        "@angular/common": "latest",
+        "@angular/compiler": "latest",
+        "@angular/platform-browser": "latest",
+        "@angular/platform-browser-dynamic": "latest",
+        "@angular/router": "latest"
     },
     "prettier": {
         "printWidth": 99999999
